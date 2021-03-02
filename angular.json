@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webbarbershop-app": {
+    "WebBarberShop-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/webbarbershop-app",
+            "outputPath": "dist/WebBarberShop-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "webbarbershop-app:build"
+            "browserTarget": "WebBarberShop-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "webbarbershop-app:build:production"
+              "browserTarget": "WebBarberShop-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "webbarbershop-app:build"
+            "browserTarget": "WebBarberShop-app:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "webbarbershop-app:serve"
+            "devServerTarget": "WebBarberShop-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "webbarbershop-app:serve:production"
+              "devServerTarget": "WebBarberShop-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "webbarbershop-app"
+  "defaultProject": "WebBarberShop-app"
 }
