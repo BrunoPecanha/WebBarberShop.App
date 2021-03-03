@@ -1,20 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { DEFAULT_CURRENCY_CODE, NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
-import { CompanyModel } from './models/company.model';
+import { CompanyComponent } from './components/company/company.component';
+import {APP_BASE_HREF} from '@angular/common';
+import { RegisterComponent } from './components/register/register.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';  
+import { rootRouterConfig } from './app.route';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompanyComponent,
+    RegisterComponent    
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule,
-    CompanyModel
+    FormsModule,
+    [RouterModule.forRoot(rootRouterConfig, {useHash: false})]
   ],
-  providers: [],
+  providers: [
+  {
+    provide: APP_BASE_HREF, useValue: '/'
+  },
+  {
+      provide: LOCALE_ID,
+      useValue: 'pt'
+  }, 
+  {
+      provide:  DEFAULT_CURRENCY_CODE,
+      useValue: 'BRL'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

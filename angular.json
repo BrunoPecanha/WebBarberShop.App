@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WebBarberShop-app": {
+    "Webbarbershop-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WebBarberShop-app",
+            "outputPath": "dist/Webbarbershop-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WebBarberShop-app:build"
+            "browserTarget": "Webbarbershop-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WebBarberShop-app:build:production"
+              "browserTarget": "Webbarbershop-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WebBarberShop-app:build"
+            "browserTarget": "Webbarbershop-app:build"
           }
         },
         "test": {
@@ -91,9 +91,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css"              
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         },
         "lint": {
@@ -113,16 +117,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WebBarberShop-app:serve"
+            "devServerTarget": "Webbarbershop-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WebBarberShop-app:serve:production"
+              "devServerTarget": "Webbarbershop-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "WebBarberShop-app"
+  "defaultProject": "Webbarbershop-app",
+  "cli": {
+    "analytics": "b04e205d-6a56-470d-8630-df167007f507"
+  }
 }
