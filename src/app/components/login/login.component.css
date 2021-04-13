@@ -11,20 +11,35 @@
   font-weight: 400;
 }
 
+.borda { 
+  border-style: groove;
+  width:  800px;
+  height: 800px;
+}
+
 #acessoFila {
-  text-align: center;
-  font-style: italic;
-  color: #E4AD1F;
+ 
+  padding-left: 10px;
+  padding-top: 5px;
+  display: flex;
+ 
+ 
 }
 
 #rodape {
   padding: 10px;
 }
 
-body  {
+#rectangle{
+  width:200px;
+  height:100px;
+  background:blue;
+}
+
+/* body  {
   background-image: url("../login/bg1.jpg"); 
   background-color: #cccccc; 
- } 
+ }  */
 
 .form-signin input[type="email"] {
   margin-bottom: -1px;
