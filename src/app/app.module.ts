@@ -8,12 +8,14 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';  
 import { rootRouterConfig } from './app.route';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
-    RegisterComponent    
+    RegisterComponent,
+    LoginComponent    
   ],
   imports: [
     HttpClientModule,
