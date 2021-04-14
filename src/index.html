@@ -13,25 +13,85 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   
+  <script src="https://kit.fontawesome.com/6a74aafbb0.js" crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <title>Web BarberShop v 1.0</title>
 </head>
-<body>
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
+
+<body>  
+  <div>TESTE</div>
+  <div class="d-none d-md-block"> 
+  <style>  
+
+     body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background:  #212529;
+        padding: 10px 0;       
+        color: #fff;
     }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
+    .fixed-header{
+        width: 100%;
+        position: fixed;        
+        background:  white;
+        padding: 10px 0;       
+        color: #fff;
     }
-  </style>
+    .fixed-header{
+        top: 0;
+        
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+  </style>  
+   <div class="fixed-header pb-2">
+    <header class="p-0 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
+          <span>
+            <img class="mb-4" src="../assets/logo.png" alt="King's Sons" width="100" height="100px">  
+          </span>    
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-10  mb-md-0">
+            <li><a href="#" class="nav-link px-3 text-secondary"><i class="fas fa-users pr-2" style="color: #fff;"></i>Fila</a></li>            
+            <li><a href="#" class="nav-link px-3 text-white"><i class="fas fa-cut pr-2" style="color: #fff;" ></i>Serviços</a></li>
+            <li><a href="#" class="nav-link px-3 text-white"><i class="fas fa-phone pr-2" style="color: #fff;" ></i>Fala comigo</a></li>
+            <li><a href="#" class="nav-link px-3 text-white"><i class="fas fa-address-card pr-2" style="color: #fff;" ></i>Quem somos</a></li>
+          </ul>    
+          <div class="text-end">
+            <a href="/login" type="button" class="btn btn-outline-light me-2">Entrar</a>
+            <a href="/register" type="button" class="btn btn-warning">Cadastrar-se</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
   <app-root></app-root>
+  <div class="fixed-footer">
+    <div class="container" style="text-align: center;">&copy; 2021 - Bruno Peçanha - Todos os direitos reservados</div>        
+  </div>
+  
+</div>
 </body>
+
 </html>

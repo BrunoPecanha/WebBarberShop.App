@@ -11,24 +11,12 @@
   font-weight: 400;
 }
 
-.borda { 
-  border-style: groove;
-  width:  800px;
-  height: 800px;
-}
-
-#acessoFila {
- 
+#acessoFila { 
   padding-left: 10px;
   padding-top: 5px;
   display: flex;
- 
- 
 }
 
-#rodape {
-  padding: 10px;
-}
 
 #rectangle{
   width:200px;
