@@ -24,6 +24,10 @@
   background:blue;
 }
 
+h1 {
+  color: #e2a60a;    
+}
+
 /* body  {
   background-image: url("../login/bg1.jpg"); 
   background-color: #cccccc; 

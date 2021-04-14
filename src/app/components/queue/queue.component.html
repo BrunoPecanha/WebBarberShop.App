@@ -1,0 +1,21 @@
+<div class="container col-12" style="margin-top: 105px;">
+    <h1>FILA</h1>
+
+   <div class="d-flex pt-0">
+    <div *ngFor="let costumer of teste" class="pr-1 pb-1">
+        <div class="card" style="width: 250px; height: 150px;">
+            <span *ngIf="costumer.posicao === 1" class="badge badge-primary badge-pill">Cortando</span>
+            <span *ngIf="costumer.posicao === 2" class="badge badge-primary badge-pill">Próximo</span>
+            <span *ngIf="costumer.posicao !== 1 && costumer.posicao !== 2" class="badge badge-primary badge-pill">{{costumer.posicao}}</span>
+            <div class="card-body">
+              <h5 class="card-title">{{ costumer.nome}} {{costumer.sobrenome}}</h5>
+              <span class="card-subtitle mb-2 text-muted" >Barbeiro: {{costumer.barbeiro}}</span>    
+              <div *ngFor="let service of costumer.servicos">
+                <small class="card-text">{{service.nome}}</small>
+              </div>     
+            </div>
+        </div>
+    </div>
+   </div>    
+   
+</div>

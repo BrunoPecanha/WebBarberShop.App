@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';  
 import { rootRouterConfig } from './app.route';
 import { LoginComponent } from './components/login/login.component';
+import { QueueComponent } from './components/queue/queue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
     RegisterComponent,
-    LoginComponent    
+    LoginComponent,
+    QueueComponent    
   ],
   imports: [
     HttpClientModule,
