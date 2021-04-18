@@ -5,18 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './queue.component.html',
   styleUrls: ['./queue.component.css']
 })
-export class QueueComponent implements OnInit {
-
- 
+export class QueueComponent implements OnInit { 
 
   recuperarServicosCliente(posicao: number): void {
-      var clienteLista = this.clientes.find(x => x.posicao === posicao);
+      var clienteLista = this.clientesFront.find(x => x.posicao === posicao);
       this.cliente = clienteLista
       this.servicosClienteSelecionado = (clienteLista !== undefined && clienteLista.servicos !== undefined) ? clienteLista.servicos : ''       
   }
 
   filtrarPorBarbeiro(barbeiro: string): void {
-      this.clientes.find
+      if (barbeiro.includes("Todos"))
+      {
+        this.clientesFront = this.clientesBD;
+        return;
+      }    
+      this.clientesFront = this.clientesBD.filter(x => x.barbeiro.includes(barbeiro.split(" ")[0]));
   }
 
   cliente: any;
@@ -35,9 +38,14 @@ export class QueueComponent implements OnInit {
     id: 3,
     nome: 'Giovanny',
     apelido: 'Angolano'
+  },
+  {
+    id: 4,
+    nome: 'Indiferente',
+    apelido: ''
   }]
-  
-  clientes = [
+  clientesFront = new Array<any>();
+  clientesBD = [
     {
        posicao: 1,
        nome: 'Bruno',
@@ -134,7 +142,7 @@ export class QueueComponent implements OnInit {
     inicioem: '',
     sobrenome: 'Mary',
     ematendomento: false,
-    barbeiro: 'Indiferente',
+    barbeiro: 'Alisson',
     servicos: [
       {
         nome: 'Sombrancelha'
@@ -150,7 +158,7 @@ export class QueueComponent implements OnInit {
     inicioem: '',
     sobrenome: 'Mary',
     ematendomento: false,
-    barbeiro: 'Indiferente',
+    barbeiro: 'Alisson',
     servicos: [
       {
         nome: 'Corte à tesoura'
@@ -369,7 +377,9 @@ export class QueueComponent implements OnInit {
  ]
 }]
 
-  constructor() { }  
+  constructor() { 
+    this.clientesFront = this.clientesBD;
+  }  
 
   ngOnInit(): void {
   }
