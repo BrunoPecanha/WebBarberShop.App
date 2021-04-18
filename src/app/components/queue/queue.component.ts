@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueueComponent implements OnInit {
 
-  cliente: any;
-  servicosClienteSelecionado: any;
+ 
 
   recuperarServicosCliente(posicao: number): void {
       var clienteLista = this.clientes.find(x => x.posicao === posicao);
@@ -16,6 +15,28 @@ export class QueueComponent implements OnInit {
       this.servicosClienteSelecionado = (clienteLista !== undefined && clienteLista.servicos !== undefined) ? clienteLista.servicos : ''       
   }
 
+  filtrarPorBarbeiro(barbeiro: string): void {
+      this.clientes.find
+  }
+
+  cliente: any;
+  servicosClienteSelecionado: any;
+  barbeiros = [ {
+    id: 1,
+    nome: 'Leonardo',
+    apelido: 'Neymar'
+  },
+  {
+    id: 2,
+    nome: 'Alisson',
+    apelido: 'Neguinho'
+  },
+  {
+    id: 3,
+    nome: 'Giovanny',
+    apelido: 'Angolano'
+  }]
+  
   clientes = [
     {
        posicao: 1,

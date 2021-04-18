@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { rootRouterConfig } from './app.route';
 import { LoginComponent } from './components/login/login.component';
 import { QueueComponent } from './components/queue/queue.component';
+import { ServicosComponent } from './components/servicos/servicos.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { QueueComponent } from './components/queue/queue.component';
     CompanyComponent,
     RegisterComponent,
     LoginComponent,
-    QueueComponent    
+    QueueComponent,
+    ServicosComponent
   ],
   imports: [
     HttpClientModule,

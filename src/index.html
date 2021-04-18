@@ -21,8 +21,8 @@
 
 <body>  
   <!-- <div>TESTE</div>
-  <div class="d-none d-md-block">  -->
-  <div style="padding-top: 20px;">
+  <div class="d-none d-md-block">  
+  <div style="padding-top: 20px;"> -->
   <style>  
 
      body{        
@@ -31,13 +31,13 @@
     }
     .container{
         width: 80%;
-        margin: 0 auto; /* Center the DIV horizontally */
+        margin: 0 auto; 
     }
     .fixed-footer{
         width: 100%;
         position: fixed;        
         background:  #212529;
-        padding: 10px 0;       
+        padding: 0px 0;       
         color: #fff;
     }
 
@@ -45,9 +45,9 @@
         width: 100%;
         position: fixed;        
         background:  white;
-        padding: 10px 0;       
+        padding: 0px 0;       
         color: #fff;
-        z-index: 999;
+        z-index: 999px;
     }
     .fixed-header{
         top: 0;
@@ -56,7 +56,7 @@
     .fixed-footer{
         bottom: 0;
     }    
-    /* Some more styles to beutify this example */
+
     nav a{
         color: #fff;
         text-decoration: none;
@@ -64,15 +64,15 @@
         display: inline-block;
     }
     .container p{
-        line-height: 200px; /* Create scrollbar to test positioning */
+        line-height: 200px; 
     }
   </style>  
-   <div class="fixed-header pb-2">
-    <header class="p-0 bg-dark text-white">
-      <div class="container">
+   <div class="fixed-header pt-0">
+    <header class="pt-0 bg-dark text-white">
+      <div class="container col-12">
         <div class="d-flex flex-wrap align-items-center justify-content-lg-start">
           <span>
-            <img class="mb-4" src="../assets/logo.png" alt="King's Sons" width="100" height="100px">  
+            <img class="mb-4" src="../assets/logo.png" alt="King's Sons" width="100" height="100px" style="padding-top: 5px;">  
           </span>    
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-10  mb-md-0">
             <li><a href="/queue" class="nav-link px-3 text-secondary"><i class="fas fa-users pr-2" style="color: #fff;"></i>Fila</a></li>            
@@ -81,8 +81,8 @@
             <li><a href="/whoweare" class="nav-link px-3 text-white"><i class="fas fa-address-card pr-2" style="color: #fff;" ></i>É Nós</a></li>
           </ul>    
           <div class="text-end">
-            <a href="/login" type="button" class="btn btn-outline-light me-2">Partiu Fila</a>
-            <a href="/register" type="button" class="btn btn-warning">Se Cadastra Aqui</a>
+            <a href="/login" type="button" class="btn btn-outline-light me-2">Entrar na Fila</a>
+            <a href="/register" type="button" class="btn btn-warning">Cadastrar</a>
           </div>
         </div>
       </div>
