@@ -7,19 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QueueComponent implements OnInit { 
 
-  recuperarServicosCliente(posicao: number): void {
+private reOrganizaPorBarbeiro(lista: any[]) : void {
+  for(var i = 0; lista.length; ++i) {
+    lista[i].posicao = i+1;
+  }
+}
+
+public  recuperarServicosCliente(posicao: number): void {
       var clienteLista = this.clientesFront.find(x => x.posicao === posicao);
       this.cliente = clienteLista
       this.servicosClienteSelecionado = (clienteLista !== undefined && clienteLista.servicos !== undefined) ? clienteLista.servicos : ''       
   }
 
-  filtrarPorBarbeiro(barbeiro: string): void {
+public filtrarPorBarbeiro(barbeiro: string): void {
       if (barbeiro.includes("Todos"))
       {
-        this.clientesFront = this.clientesBD;
+        this.clientesFront = JSON.parse(JSON.stringify(this.clientesBD));
         return;
       }    
-      this.clientesFront = this.clientesBD.filter(x => x.barbeiro.includes(barbeiro.split(" ")[0]));
+      this.clientesFront = JSON.parse(JSON.stringify(this.clientesBD.filter(x => x.barbeiro.includes(barbeiro.split(" ")[0]))));      
+      this.reOrganizaPorBarbeiro(this.clientesFront);
   }
 
   cliente: any;
