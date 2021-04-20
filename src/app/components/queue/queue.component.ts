@@ -28,7 +28,7 @@ public filtrarPorBarbeiro(barbeiro: string): void {
       this.clientesFront = JSON.parse(JSON.stringify(this.clientesBD.filter(x => x.barbeiro.includes(barbeiro.split(" ")[0]))));      
       this.reOrganizaPorBarbeiro(this.clientesFront);
   }
-
+  dataHoje = new Date().toLocaleString('en-GB');
   cliente: any;
   servicosClienteSelecionado: any;
   barbeiros = [ {

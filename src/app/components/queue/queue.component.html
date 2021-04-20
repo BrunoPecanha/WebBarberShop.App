@@ -1,7 +1,7 @@
 <div class="container col-12" style="margin-top: 70px;">
   <div class="row">
       <div class="col-12">
-        <h1 class="pb-1"><i class="fas fa-users text-muted" style="color: #131212;"></i> Fila</h1>
+        <h1 class="pb-1"><i class="fas fa-users text-muted" style="color: #131212;"></i> Fila -  {{dataHoje}}</h1>
       </div>         
         <div class="input-group mb-3">
           <select class="custom-select" #barbeiro (change)="filtrarPorBarbeiro(barbeiro.value)">
@@ -18,7 +18,7 @@
 
       <div class="d-flex flex-wrap" style="height: 650px; overflow: auto;" *ngIf="clientesFront && clientesFront.length > 0" >
         <div *ngFor="let costumer of clientesFront" class="pr-1 pb-1">
-            <div class="card"  data-toggle="tooltip" data-placement="top"  style="width: 240px; height: 160px;">
+            <div class="card"  data-toggle="tooltip" data-placement="top"  style="width: 247px; height: 155px;">
                 <span *ngIf="costumer.ematendomento" class="badge badge-warning badge-pill">Cortando</span>
                 <span *ngIf="!costumer.ematendomento"  class="badge badge-dark badge-pill">Ordem chegada: {{costumer.posicao}}</span>
                 <div class="card-body">
