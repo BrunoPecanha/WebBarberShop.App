@@ -18,7 +18,7 @@
 
       <div class="d-flex flex-wrap" style="height: 650px; overflow: auto;" *ngIf="clientesFront && clientesFront.length > 0" >
         <div *ngFor="let costumer of clientesFront" class="pr-1 pb-1">
-            <div class="card"  data-toggle="tooltip" data-placement="top"  style="width: 250px; height: 160px;">
+            <div class="card"  data-toggle="tooltip" data-placement="top"  style="width: 240px; height: 160px;">
                 <span *ngIf="costumer.ematendomento" class="badge badge-warning badge-pill">Cortando</span>
                 <span *ngIf="!costumer.ematendomento"  class="badge badge-dark badge-pill">Ordem chegada: {{costumer.posicao}}</span>
                 <div class="card-body">

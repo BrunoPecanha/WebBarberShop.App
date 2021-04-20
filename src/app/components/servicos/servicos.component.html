@@ -4,16 +4,19 @@
           <h1 class="pb-1"><i class="fas fa-store-alt text-muted"></i> Serviços</h1>
         </div>  
     </div>
-
-    <div class="card border-warning mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-            Corte à máquina simples
+    <div class="d-flex flex-wrap" style="height: 700px; overflow: auto;" >
+        <div *ngFor="let service of services" class="pr-1 pb-1">
+            <div class="card"  data-toggle="tooltip" data-placement="top"  style="width: 240px; height: 160px;">               
+                <div class="card-body">
+                  <h5 class="card-title">{{ service.name }}</h5>
+                  <span class="card-subtitle mb-2 text-muted" class="pb-1">Valor R$ : {{service.price}}</span> 
+                  <div style="text-align: center; margin-top: 10px;">
+                    <button type="button" class="btn btn-primary popover-test" data-toggle="modal" data-target="#detalhe">
+                      Ver Detalhes
+                    </button>
+                  </div>            
+                </div>
+            </div>        
         </div>
-        <div class="card-body text-primary">       
-          <span class="card-text">Máquinas 1, 2, 3, 4, 5 e 6</span>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">R$ 20,00</small>
-        </div>
-    </div>
+      </div>   
 </div>

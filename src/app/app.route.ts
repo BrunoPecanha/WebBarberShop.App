@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router'
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { LoginComponent } from './components/login/login.component';
 import { QueueComponent } from './components/queue/queue.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -11,5 +12,6 @@ export const rootRouterConfig: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'queue', component: QueueComponent},   
     { path: 'servicos', component: ServicosComponent},
-    { path: 'talktous', component: TalktousComponent} 
+    { path: 'talktous', component: TalktousComponent},
+    { path: 'forgotpassword', component: ForgotpasswordComponent} 
 ];

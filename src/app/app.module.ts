@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { DEFAULT_CURRENCY_CODE, NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
-import { CompanyComponent } from './components/company/company.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { RegisterComponent } from './components/register/register.component';
 import { RouterModule } from '@angular/router';
@@ -12,17 +11,19 @@ import { LoginComponent } from './components/login/login.component';
 import { QueueComponent } from './components/queue/queue.component';
 import { ServicosComponent } from './components/servicos/servicos.component';
 import { TalktousComponent } from './components/talktous/talktous.component';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompanyComponent,
     RegisterComponent,
     LoginComponent,
     QueueComponent,
     ServicosComponent,
-    TalktousComponent
+    TalktousComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     HttpClientModule,
@@ -30,8 +31,8 @@ import { TalktousComponent } from './components/talktous/talktous.component';
     FormsModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash: false})]
   ],
-  providers: [
-  {
+  providers: [    
+  {    
     provide: APP_BASE_HREF, useValue: '/'
   },
   {
