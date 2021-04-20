@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RegisterComponent } from './components/register/register.component';
+import { QueueComponent } from './components/queue/queue.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'register', component: RegisterComponent},
+  { path: 'queue', component: QueueComponent},
  
 ];
 

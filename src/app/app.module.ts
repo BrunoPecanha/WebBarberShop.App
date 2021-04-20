@@ -11,6 +11,7 @@ import { rootRouterConfig } from './app.route';
 import { LoginComponent } from './components/login/login.component';
 import { QueueComponent } from './components/queue/queue.component';
 import { ServicosComponent } from './components/servicos/servicos.component';
+import { TalktousComponent } from './components/talktous/talktous.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ServicosComponent } from './components/servicos/servicos.component';
     RegisterComponent,
     LoginComponent,
     QueueComponent,
-    ServicosComponent
+    ServicosComponent,
+    TalktousComponent
   ],
   imports: [
     HttpClientModule,
