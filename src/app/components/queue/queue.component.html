@@ -19,13 +19,13 @@
       <div class="d-flex flex-wrap" style="height: 650px; overflow: auto;" *ngIf="clientesFront && clientesFront.length > 0" >
         <div *ngFor="let costumer of clientesFront" class="pr-1 pb-1">
             <div class="card"  data-toggle="tooltip" data-placement="top"  style="width: 247px; height: 155px;">
-                <span *ngIf="costumer.ematendomento" class="badge badge-warning badge-pill">Cortando</span>
+                <span *ngIf="costumer.ematendomento" class="badge badge-primary badge-pill">Cortando</span>
                 <span *ngIf="!costumer.ematendomento"  class="badge badge-dark badge-pill">Ordem chegada: {{costumer.posicao}}</span>
                 <div class="card-body">
                   <h5 class="card-title">{{ costumer.nome}} {{costumer.sobrenome}}</h5>
                   <span class="card-subtitle mb-2 text-muted" class="pb-1">Barbeiro: {{costumer.barbeiro}}</span> 
                   <div style="text-align: center; margin-top: 10px;">
-                    <button type="button" class="btn btn-primary popover-test" (click)="recuperarServicosCliente(costumer.posicao)" data-toggle="modal" data-target="#detalhe">
+                    <button type="button" class="btn btn-warning popover-test" (click)="recuperarServicosCliente(costumer.posicao)" data-toggle="modal" data-target="#detalhe">
                       Ver Detalhes
                     </button>
                   </div>            
